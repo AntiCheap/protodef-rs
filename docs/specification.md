@@ -40,6 +40,10 @@ Different languages can make use of enums and store data differently. In order t
 * **Type**: specified by either a string or array of name and options.
 * **Counter**: valid integer or a reference string.
 
+|------|-----|----|
+|Term  |Type |meaning|
+|------|-----|-------|
+
 ### List
 * switch: ({ ?compareTo: Reference, ?compareToValue: Litteral, fields: { [Litteral]: Type, ... }, ?default: Type })
 * option: (Type)
