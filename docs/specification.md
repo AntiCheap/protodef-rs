@@ -35,9 +35,9 @@ Different languages can make use of enums and store data differently. In order t
 ## Options
 
 ### Terms
-Counter is a string. If it pases as integer it represents a fixed length otherwise it's a Reference.
-Reference is a string. It is the relative path from the current type to another field.
-Definition is a string. It is a type definition, either string `"name"` or array `[name, options]`.
+* Counter is a string. If it pases as integer it represents a fixed length otherwise it's a Reference.
+* Reference is a string. It is the relative path from the current type to another field.
+* Definition is a string. It is a type definition, either string `"name"` or array `[name, options]`.
 
 ### List
 ! Please note: all comparisons are done converting numbers to string.
