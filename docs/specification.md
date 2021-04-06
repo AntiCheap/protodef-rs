@@ -35,25 +35,19 @@ Different languages can make use of enums and store data differently. In order t
 ## Options
 
 ### Terms
-* **Reference**: string of the path of a value in the data structure.
-* **Litteral**: string, if parses to integer its number to string.
-* **Type**: specified by either a string or array of name and options.
-* **Counter**: valid integer or a reference string.
-
-|Term      | Type         | value                           |
-|----------|--------------|---------------------------------|
-|Reference | String       | the path of another field       |
-|Litteral  | String       | text or string of number        |
-|Type      | String/Array | type definition                 |
-|Counter   | String       | number if parses or a reference |
+Counter is a string. If it pases as integer it represents a fixed length otherwise it's a Reference.
+Reference is a string. It is the relative path from the current type to another field.
+Definition is a string. It is a type definition, either string `"name"` or array `[name, options]`.
 
 ### List
-* switch: ({ ?compareTo: Reference, ?compareToValue: Litteral, fields: { [Litteral]: Type, ... }, ?default: Type })
-* option: (Type)
-* array: ({ type: Type, ?countType: Type, ?count: Counter })
-* container: ([ { name: String, type: Type }, ... ])
-* count: ({ type: Type, countFor: Field })
-* buffer: ({ countType: Type, ?count: Counter, ?rest: Boolean })
-* bitfield: ([ { name: String, size: Integer, ?signed: Boolean } ])
-* mapper: ({ type: Type, mappings: { String: Litteral, ... } })
-* pstring: ({ countType: Type, ?count: Counter })
+! Please note: all comparisons are done converting numbers to string.
+
+* switch: ({ ?compareTo: Reference, ?compareToValue: String, fields: { [String]: Definition, ... }, ?default: Definition })
+* option: (Definition)
+* array: ({ type: Definition, ?countType: Definition, ?count: Counter })
+* container: ([ { name: String, type: Definition }, ... ])
+* count: ({ type: Definition, countFor: Reference })
+* buffer: ({ countType: Definition, ?count: Counter, ?rest: Boolean })
+* bitfield: ([ { name: String, size: Number, ?signed: Boolean } ])
+* mapper: ({ type: Definition, mappings: { String: String, ... } })
+* pstring: ({ countType: Definition, ?count: Counter })
