@@ -1,0 +1,34 @@
+[
+    "container",
+    [
+        {
+            "name": "container",
+            "type": [
+                "container",
+                [
+                    {
+                        "name": "alfa",
+                        "type": "f32"
+                    },
+                    {
+                        "name": "beta",
+                        "type": "u8"
+                    },
+                    {
+                        "name": "gamma",
+                        "type": [
+                            "mapper",
+                            {
+                                "type": "i8",
+                                "mappings": {
+                                    "0": "zero",
+                                    "10": "ten"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            ]
+        }
+    ]
+]
