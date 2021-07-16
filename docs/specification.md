@@ -33,12 +33,11 @@ Different languages can make use of enums and store data differently. In order t
 * **option**: can hold or not another type.
 
 ## Options
-| Type   | Options                          | Parse                                                                                                                                                                                                                           | Serial |
-|--------|----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------|
-| mapper | { type: Type, mappings: Object } | First it parses the options 'type' storing its result as a flag. The result of parsing will be the string in the 'mappings' object under the key that matches the flag in a weak comparison. If no match is found parsing fail. |        |
-|        |                                  |                                                                                                                                                                                                                                 |        |
-|        |                                  |                                                                                                                                                                                                                                 |        |
-
+| Type   | Options                          | Parse                                                                                                                                                                                                                        | Serial                                              |
+|--------|----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------|
+| mapper | { type: Type, mappings: Object } | First the 'type' defined in options is parsed and stored as flag. The parsing result is always a string, its value is found under the key matching the flag in the 'mappings' object. If no match happens the parsing fails. | If the data to serialize isn't a string this fails. |
+|        |                                  |                                                                                                                                                                                                                              |                                                     |
+|        |                                  |                                                                                                                                                                                                                              |                                                     |
 
 
 ### Terms
