@@ -29,10 +29,16 @@ Different languages can make use of enums and store data differently. In order t
 * **switch**: changes type with a weak comparison.
 #### Utility
 * **count**: gets a countable when serializing.
-* **mapper**: looks up a string for a value.
+* **mapper**: when parsing it first parses the type specified as 'type'
 * **option**: can hold or not another type.
 
 ## Options
+
+| Type   | Options                          | Parse                                                                                                                                                                                                                           | Serial |
+|--------|----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------|
+| mapper | { type: Type, mappings: Object } | First it parses the options 'type' storing its result as a flag. The result of parsing will be the string in the 'mappings' object under the key that matches the flag in a weak comparison. If no match is found parsing fail. |        |
+|        |                                  |                                                                                                                                                                                                                                 |        |
+|        |                                  |                                                                                                                                                                                                                                 |        |
 
 ### Terms
 * Counter is a string. If it pases as integer it represents a fixed length otherwise it's a Reference.
