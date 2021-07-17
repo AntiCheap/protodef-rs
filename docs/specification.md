@@ -15,7 +15,11 @@ Different languages can make use of enums and store data differently. In order t
 * **i8, i16, i32, i64**: two's complement integers.
 * **u8, u16, u32, u64**: unsigned integers.
 * **varint**: base 128 int32. ([Protocol Buffers](https://developers.google.com/protocol-buffers/docs/encoding#varints))
+
+#### Primitives:
 * **bool**: boolean value, zero or one byte.
+* **cstring**: null terminated utf-8 string.
+* **void**: only usable inside switch.
 #### Countables:
 * **array**: repetition of another type.
 * **buffer**: chunk of binary data.
@@ -26,7 +30,6 @@ Different languages can make use of enums and store data differently. In order t
 * **switch**: changes type with a weak comparison.
 #### Utility:
 * **count**: gets a countable when serializing.
-* **cstring**: null terminated utf-8 string.
 * **mapper**: when parsing it first parses the type specified as 'type'
 * **option**: can hold or not another type.
 
