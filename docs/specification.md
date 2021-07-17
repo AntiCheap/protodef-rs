@@ -18,7 +18,7 @@ Different languages can make use of enums and store data differently. In order t
 #### Primitives
 * **bool**: boolean value, zero or one byte.
 * **cstring**: null terminated utf-8 string.
-* **void**: nothing or empty container.
+
 #### Countables
 * **array**: repetition of another type.
 * **buffer**: chunk of binary data.
