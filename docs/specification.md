@@ -10,23 +10,22 @@ Different languages can make use of enums and store data differently. In order t
 
 ## Natives
 
-#### Numeric & Basic
+#### Numeric and simple:
 * **f32, f64**: floating points. ([IEEE 754](https://en.wikipedia.org/wiki/IEEE_754))
 * **i8, i16, i32, i64**: two's complement integers.
 * **u8, u16, u32, u64**: unsigned integers.
 * **varint**: base 128 int32. ([Protocol Buffers](https://developers.google.com/protocol-buffers/docs/encoding#varints))
 * **bool**: boolean value, zero or one byte.
 * **cstring**: null terminated utf-8 string.
-
-#### Countables
+#### Countables:
 * **array**: repetition of another type.
 * **buffer**: chunk of binary data.
 * **pstring**: utf-8 string of some length.
-#### Structures
+#### Structures:
 * **bitfield**: groups numbers coming from bits.
 * **container**: organizes other types inside it.
 * **switch**: changes type with a weak comparison.
-#### Utility
+#### Utility:
 * **count**: gets a countable when serializing.
 * **mapper**: when parsing it first parses the type specified as 'type'
 * **option**: can hold or not another type.
